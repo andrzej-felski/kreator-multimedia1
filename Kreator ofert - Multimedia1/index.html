@@ -1146,8 +1146,8 @@ if (pkg.promocja && pkg.promocja.cena !== null && pkg.promocja.cena !== undefine
 }
   });
 
-  const sumaZStala = sumaCena + additionalFee;
-  const sumaPromocyjnaZStala = sumaCenaPromocyjna + (additionalFee - feeAdjustment);
+const sumaZStala = Math.max(0, sumaCena + additionalFee;);
+const sumaPromocyjnaZStala = Math.max(0, sumaCenaPromocyjna + (additionalFee - feeAdjustment));
 
   const hasPromotion = selectedPackages.some(pkg => pkg.promocja && pkg.promocja.cena !== null && pkg.promocja.cena !== undefined);
 
