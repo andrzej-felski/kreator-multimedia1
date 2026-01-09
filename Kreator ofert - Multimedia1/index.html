@@ -171,74 +171,6 @@ const packages = [
     promocja: { cena: 35.00, czasTrwania: 3 }
   },
 
-// Internet światłowodowy - 2025/029
-  {
-    typ: 'Internet światłowodowy',
-    nazwa: 'Strzał w Dziesiątkę 150Mb+',
-    cena: 45.00,
-    cenaAktywacji: 29.99,
-    dlugoscUmowy: 10,
-    promocja: { cena: 0.82, czasTrwania: 1 }
-  },
-  {
-    typ: 'Internet światłowodowy',
-    nazwa: 'Strzał w Dziesiątkę 300Mb+',
-    cena: 55.00,
-    cenaAktywacji: 29.99,
-    dlugoscUmowy: 10,
-    promocja: { cena: 0.82, czasTrwania: 1 }
-  },
-  {
-    typ: 'Internet światłowodowy',
-    nazwa: 'Strzał w Dziesiątkę 600Mb+',
-    cena: 65.00,
-    cenaAktywacji: 29.99,
-    dlugoscUmowy: 10,
-    promocja: { cena: 0.82, czasTrwania: 1 }
-  },
-  {
-    typ: 'Internet światłowodowy',
-    nazwa: 'Strzał w Dziesiątkę 900Mb+',
-    cena: 75.00,
-    cenaAktywacji: 29.99,
-    dlugoscUmowy: 10,
-    promocja: { cena: 0.82, czasTrwania: 1 }
-  },
-
-// Internet światłowodowy - 2025/030
-  {
-    typ: 'Internet światłowodowy',
-    nazwa: 'Strzał w Dziesiątkę 150Mb+',
-    cena: 45.00,
-    cenaAktywacji: 19.99,
-    dlugoscUmowy: 20,
-    promocja: { cena: 0.82, czasTrwania: 3 }
-  },
-  {
-    typ: 'Internet światłowodowy',
-    nazwa: 'Strzał w Dziesiątkę 300Mb+',
-    cena: 55.00,
-    cenaAktywacji: 19.99,
-    dlugoscUmowy: 20,
-    promocja: { cena: 0.82, czasTrwania: 3 }
-  },
-  {
-    typ: 'Internet światłowodowy',
-    nazwa: 'Strzał w Dziesiątkę 600Mb+',
-    cena: 65.00,
-    cenaAktywacji: 19.99,
-    dlugoscUmowy: 20,
-    promocja: { cena: 0.82, czasTrwania: 3 }
-  },
-  {
-    typ: 'Internet światłowodowy',
-    nazwa: 'Strzał w Dziesiątkę 900Mb+',
-    cena: 75.00,
-    cenaAktywacji: 19.99,
-    dlugoscUmowy: 20,
-    promocja: { cena: 0.82, czasTrwania: 3 }
-  },
-
 // Internet światłowodowy - 2024/066
   {
     typ: 'Internet światłowodowy',
@@ -1083,10 +1015,6 @@ function generateOffer() {
 
 if (pkg.promocja && pkg.promocja.cena !== null && pkg.promocja.cena !== undefined) {
   sumaCenaPromocyjna += pkg.promocja.cena;
-
-  if (pkg.nazwa.includes("Strzał w Dziesiątkę")) {
-    feeAdjustment = 4.58;
-  }
 
   if (pkg.nazwa.includes("Internet BIS") && pkg.dlugoscUmowy === 24) {
     feeAdjustment = 3.76;
